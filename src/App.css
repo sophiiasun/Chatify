@@ -9,4 +9,12 @@ h1 {
   font-family: 'SEGA LOGO FONT';
   font-weight: 200;
   color: #0ccac4;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 5px solid #0ccac4;
 }
+
+h1:hover {
+	transform: scale(1.1);
+}
+
