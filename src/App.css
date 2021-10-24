@@ -1,24 +1,41 @@
-@font-face {
-font-family: 'SEGA LOGO FONT';
-font-style: normal;
-font-weight: normal;
-src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
+body {
+  background-color: #282c34;
 }
 
-h1 {
-  font-family: 'SEGA LOGO FONT';
-  font-weight: 200;
-  color: #0ccac4;
-  margin-bottom: 20px;
+.Chat {
+  text-align: center;
+  max-width: 728px;
+  margin: 0 auto;
 }
 
-h1:hover {
-	transform: scale(1.1);
+.Chat header {
+  background-color: #181717;
+  height: 10vh;
+  min-height: 50px;
+  color: white;
+  position: fixed;
+  width: 100%;
+  max-width: 728px;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 99;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.App section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: rgb(40, 37, 53);
 }
 
 main {
   padding: 10px;
-  height: 80vh;
+  height: 75vh;
   margin: 10vh 0 10vh;
   overflow-y: scroll;
   display: flex;
@@ -33,6 +50,9 @@ main::-webkit-scrollbar-track {
   background: #1e1e24;
 }
 
+main::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
 
 form {
   height: 10vh;
@@ -53,7 +73,7 @@ form button {
 
 input {
   line-height: 1.5;
-  width: 1000px;
+  width: 100%;
   font-size: 1.5rem;
   background: rgb(58, 58, 58);
   color: white;
