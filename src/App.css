@@ -1,6 +1,21 @@
-body {
-  background-color: #282c34;
+@font-face {
+font-family: 'SEGA LOGO FONT';
+font-style: normal;
+font-weight: normal;
+src: local('SEGA LOGO FONT'), url('SEGA.woff') format('woff');
 }
+
+h1 {
+  font-family: 'SEGA LOGO FONT';
+  font-weight: 200;
+  color: #0ccac4;
+  margin-bottom: 20px;
+}
+
+h1:hover {
+	transform: scale(1.1);
+}
+
 
 .Chat {
   text-align: center;
@@ -60,7 +75,6 @@ form {
   bottom: 0;
   background-color: rgb(24, 23, 23);
   width: 100%;
-  max-width: 728px;
   display: flex;
   font-size: 1.5rem;
 }
