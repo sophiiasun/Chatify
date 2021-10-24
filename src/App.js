@@ -28,11 +28,16 @@ const firestore = firebase.firestore();
 function App() {
 
   const [user] = useAuthState(auth);
+  const [Room,setRoom] = useState('')
+
+  function RouteChange(route) {
+    route === 'chat' ? setRoom('chat') : setRoom('')
+  }
 
   return (
     <div className="App">
       <section>
-        {user ? <ChatRoom /> : <SignIn />}
+        {user ? (Room ? <Chat RouteChange={RouteChange}/> : <ChatRoom RouteChange={RouteChange}/>) : <SignIn />} {/*empty state = home*/}
       </section>
 
     </div>
@@ -60,13 +65,13 @@ function SignOut() {
   )
 }
 
-function ChatRoom()  {
+function ChatRoom(props)  {
 
   return (
     <div className='tc'>
       <h1 className='f2 title'>Chatify</h1>
       <Scroll>
-        <RoomList/>
+        <RoomList RouteChange={props.RouteChange}/>
       </Scroll>
     </div>
   );

@@ -23,7 +23,7 @@ firebase.initializeApp({
 const auth = firebase.auth(); 
 const firestore = firebase.firestore(); 
 
-function Chat() {
+function Chat(props) {
     const dummy = useRef();
     const messagesRef = firestore.collection('messages');
     const query = messagesRef.orderBy('createdAt').limit(25);
@@ -50,6 +50,7 @@ function Chat() {
     }
   
     return (<>
+      <button onClick={() => {props.RouteChange('')}}>Return To Chat List 🗣 </button>
       <main>
   
         {messages && messages.map(msg => <ChatMessage key={msg.id} message={msg} />)}
@@ -67,7 +68,6 @@ function Chat() {
       </form>
     </>)
   }
-  
   
   function ChatMessage(props) {
     const { text, uid, photoURL } = props.message;
