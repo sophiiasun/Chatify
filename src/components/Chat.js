@@ -51,6 +51,7 @@ function Chat(props) {
   
     return (<>
       <button onClick={() => {props.RouteChange('')}}>Return To Chat List 🗣 </button>
+      <h3>Chat Topic</h3>
       <main>
         {messages && messages.map(msg => 
             msg.roomNumber == window.roomNumber&&<ChatMessage key={msg.id} message={msg} />
@@ -62,7 +63,7 @@ function Chat(props) {
   
       <form onSubmit={sendMessage}>
   
-        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="say something nice" />
+        <input value={formValue} onChange={(e) => setFormValue(e.target.value)} placeholder="type your text here" />
   
         <button type="submit" disabled={!formValue}>📨</button>
   
