@@ -81,7 +81,7 @@ form {
 
 form button {
   width: 20%;
-  background-color: rgb(56, 56, 143);
+  background-color: #0ccac4;
 }
 
 
@@ -136,7 +136,7 @@ p {
   padding: 10px 20px;
   border-radius: 25px;
   position: relative;
-  color: white;
+  color: black;
   text-align: center;
 }
 
@@ -152,7 +152,7 @@ p {
 
 .sent p {
   color: white;
-  background: #0b93f6;
+  background: #0ccac4;
   align-self: flex-end;
 }
 .received p {
