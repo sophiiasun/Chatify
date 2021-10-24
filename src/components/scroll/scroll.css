@@ -1,5 +1,5 @@
 .scroll {
-	overflow: scroll;
+	/* overflow: scroll; */
 	border-top: 5px solid #0ccac4;
-	height: 900px;
+	/* height: 900px; */
 }
